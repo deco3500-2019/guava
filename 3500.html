@@ -1,0 +1,100 @@
+<DOCTYPE HTML>
+    <html>
+    <head>
+      <script src="jquery-3.3.1.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+       
+        <div class="col-sm-12">
+           <h2>Food Language App</h2>
+            <p>Welcome to our example system for learning language through cooking</p>
+        </div>
+
+        <div class="demonstratorHolder">
+         <div class="demonstrator demonstratorPrimary col-sm-12">
+            <div class="col-sm-12"> Masukkan jus ke dalam gelas</div><br>
+            <div class="col-sm-12 italic"> Place the juice in the glass</div><br><br>
+            <div class="col-sm-12"><button id="sayFS1" class="btn-primary">Say</button></div>  
+         </div>
+
+
+         <div class="demonstrator col-sm-3 ">
+            <div class="col-sm-12"> Masukkan</div><br>
+            <div class="col-sm-12 italic"> Place</div><br><br>
+            <div class="col-sm-12"><button id="say1" class="btn-primary">Say</button></div>  
+         </div>
+
+         <div class="demonstrator col-sm-3 ">
+            <div class="col-sm-12"> jus</div><br>
+            <div class="col-sm-12 italic"> the juice</div><br><br>
+            <div class="col-sm-12"><button id="say2" class="btn-primary">Say</button></div>  
+         </div>
+
+         <div class="demonstrator col-sm-3 ">
+            <div class="col-sm-12"> ke dalam</div><br>
+            <div class="col-sm-12 italic"> in </div><br><br>
+            <div class="col-sm-12"><button id="say3" class="btn-primary">Say</button></div>   
+         </div>
+
+         <div class="demonstrator col-sm-3 ">
+            <div class="col-sm-12"> gelas</div><br>
+            <div class="col-sm-12 italic"> the glass</div><br><br>
+            <div class="col-sm-12"><button id="say4" class="btn-primary">Say</button></div>  
+         </div>
+        </div>
+
+        <div>
+            <audio id="s1" src="masukkan.mp3"><source src="masukkan.mp3"></source></audio>
+            <audio id="s2" src="jus.mp3"></audio>
+            <audio id="s3" src="keDalam.mp3"></audio>
+            <audio id="s4" src="gelas.mp3"></audio>
+            <audio id="fs1" src="fullsen1.mp3"></audio>
+        </div>
+      
+        <div>
+           <button id="test">Test</button>
+        </div>
+      <script>
+         
+       $('document').ready(function () {
+         $('#sayFS1').click(function() {
+            $("#sayFS1").css("background", "orange");
+            $('#fs1')[0].pause();
+            $('#fs1')[0].currentTime=0;
+            $('#fs1')[0].play();
+         });
+
+         $('#say1').click(function() {
+            $("#say1").css("background", "orange");
+            $('#s1')[0].pause();
+            $('#s1')[0].currentTime=0;
+            $('#s1')[0].play();
+         });
+
+         $('#say2').click(function() {
+            $("#say2").css("background", "orange");
+            $('#s2')[0].pause();
+            $('#s2')[0].currentTime=0;
+            $('#s2')[0].play();
+         });
+
+         
+         $('#say3').click(function() {
+            $("#say3").css("background", "orange");
+            $('#s3')[0].pause();
+            $('#s3')[0].currentTime=0;
+            $('#s3')[0].play();
+         });
+
+         $('#say4').click(function() {
+            $("#say4").css("background", "orange");
+            $('#s4')[0].pause();
+            $('#s4')[0].currentTime=0;
+            $('#s4')[0].play();
+         });
+      });
+      </script>
+    </body>

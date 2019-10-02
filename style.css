@@ -1,0 +1,11 @@
+.demonstrator{
+    text-align: center;
+    margin:2px solid black;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.italic{
+    font-style: italic;
+}
+

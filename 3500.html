@@ -1,100 +1,165 @@
 <DOCTYPE HTML>
-    <html>
-    <head>
-      <script src="jquery-3.3.1.min.js"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    
-    <body>
-       
-        <div class="col-sm-12">
-           <h2>Food Language App</h2>
-            <p>Welcome to our example system for learning language through cooking</p>
-        </div>
-
-        <div class="demonstratorHolder">
-         <div class="demonstrator demonstratorPrimary col-sm-12">
-            <div class="col-sm-12"> Masukkan jus ke dalam gelas</div><br>
-            <div class="col-sm-12 italic"> Place the juice in the glass</div><br><br>
-            <div class="col-sm-12"><button id="sayFS1" class="btn-primary">Say</button></div>  
-         </div>
-
-
-         <div class="demonstrator col-sm-3 ">
-            <div class="col-sm-12"> Masukkan</div><br>
-            <div class="col-sm-12 italic"> Place</div><br><br>
-            <div class="col-sm-12"><button id="say1" class="btn-primary">Say</button></div>  
-         </div>
-
-         <div class="demonstrator col-sm-3 ">
-            <div class="col-sm-12"> jus</div><br>
-            <div class="col-sm-12 italic"> the juice</div><br><br>
-            <div class="col-sm-12"><button id="say2" class="btn-primary">Say</button></div>  
-         </div>
-
-         <div class="demonstrator col-sm-3 ">
-            <div class="col-sm-12"> ke dalam</div><br>
-            <div class="col-sm-12 italic"> in </div><br><br>
-            <div class="col-sm-12"><button id="say3" class="btn-primary">Say</button></div>   
-         </div>
-
-         <div class="demonstrator col-sm-3 ">
-            <div class="col-sm-12"> gelas</div><br>
-            <div class="col-sm-12 italic"> the glass</div><br><br>
-            <div class="col-sm-12"><button id="say4" class="btn-primary">Say</button></div>  
-         </div>
-        </div>
-
-        <div>
-            <audio id="s1" src="masukkan.mp3"><source src="masukkan.mp3"></source></audio>
-            <audio id="s2" src="jus.mp3"></audio>
-            <audio id="s3" src="keDalam.mp3"></audio>
-            <audio id="s4" src="gelas.mp3"></audio>
-            <audio id="fs1" src="fullsen1.mp3"></audio>
-        </div>
+   <html>
+   <head>
+     <script src="jquery-3.3.1.min.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+   
+   <body>
       
-        <div>
-           <button id="test">Test</button>
+       <div class="col-sm-12">
+          <h2>Food Language App</h2>
+           <p>Welcome to our trial system for learning language through cooking.
+              <br><br>
+              Follow the recipe to learn some new words! 
+           </p>
+       </div>
+
+       <div class="demonstratorHolder">
+        <div class="demonstrator demonstratorPrimary col-sm-12">
+           <div class="col-sm-12"> Masukkan jus ke dalam gelas</div><br>
+           <div class="col-sm-12 italic"> Place the juice in the glass</div><br><br>
+           <div class="col-sm-12"><button id="sayFS1">Say</button></div>  
         </div>
-      <script>
-         
-       $('document').ready(function () {
-         $('#sayFS1').click(function() {
-            $("#sayFS1").css("background", "orange");
-            $('#fs1')[0].pause();
-            $('#fs1')[0].currentTime=0;
-            $('#fs1')[0].play();
-         });
 
-         $('#say1').click(function() {
-            $("#say1").css("background", "orange");
-            $('#s1')[0].pause();
-            $('#s1')[0].currentTime=0;
-            $('#s1')[0].play();
-         });
+        <div class="col-sm-12">
+              <br><br>
+        </div>
 
-         $('#say2').click(function() {
-            $("#say2").css("background", "orange");
-            $('#s2')[0].pause();
-            $('#s2')[0].currentTime=0;
-            $('#s2')[0].play();
-         });
+        <div class="demonstrator col-sm-3 ">
+           <div class="col-sm-12"> Masukkan</div><br>
+           <div class="col-sm-12 italic"> Place</div><br><br>
+           <div class="col-sm-12"><button id="say1">Say</button></div>  
+        </div>
 
-         
-         $('#say3').click(function() {
-            $("#say3").css("background", "orange");
-            $('#s3')[0].pause();
-            $('#s3')[0].currentTime=0;
-            $('#s3')[0].play();
-         });
+        <div class="demonstrator col-sm-3 ">
+           <div class="col-sm-12"> jus</div><br>
+           <div class="col-sm-12 italic"> the juice</div><br><br>
+           <div class="col-sm-12"><button id="say2">Say</button></div>  
+        </div>
 
-         $('#say4').click(function() {
-            $("#say4").css("background", "orange");
-            $('#s4')[0].pause();
-            $('#s4')[0].currentTime=0;
-            $('#s4')[0].play();
-         });
-      });
-      </script>
-    </body>
+        <div class="demonstrator col-sm-3 ">
+           <div class="col-sm-12"> ke dalam</div><br>
+           <div class="col-sm-12 italic"> in </div><br><br>
+           <div class="col-sm-12"><button id="say3">Say</button></div>   
+        </div>
+
+        <div class="demonstrator col-sm-3 ">
+           <div class="col-sm-12"> gelas</div><br>
+           <div class="col-sm-12 italic"> the glass</div><br><br>
+           <div class="col-sm-12"><button id="say4">Say</button></div>  
+        </div>
+       </div>
+
+       <div>
+           <audio id="s1" src="masukkan.mp3"></audio>
+           <audio id="s2" src="jus.mp3"></audio>
+           <audio id="s3" src="keDalam.mp3"></audio>
+           <audio id="s4" src="gelas.mp3"></audio>
+           <audio id="fs1" src="fullsen1.mp3"></audio>
+       </div>
+       
+       <div class="col-sm-12">
+          <br><br>
+       </div>
+
+       <div>
+          <span class="col-sm-1"></span>
+          <button id="resetBtn" class="col-sm-2">Restart this activity</button>
+          <span class="col-sm-2"></span>
+          <button id="feedbackBtn" class="col-sm-2">Feedback</button>
+          <span class="col-sm-2" ></span>
+          <button id="progressBtn" disabled="true" class="col-sm-2">Start next activity</button>
+          <span class="col-sm-1"></span>
+       </div>
+     <script>
+     
+     var attemptWord1 = 0;
+     var attemptWord2 = 0;
+     var attemptWord3 = 0;
+     var attemptWord4 = 0;
+   
+      $('document').ready(function () {
+        $('#sayFS1').click(function() {
+           $("#sayFS1").css("background", "orange");
+           $('#fs1')[0].pause();
+           $('#fs1')[0].currentTime=0;
+           $('#fs1')[0].play();
+        });
+
+        $('#say1').click(function() {
+           attemptWord1++;
+
+          if(attemptWord1 <= 2){
+              $('#s1')[0].pause();
+              $('#s1')[0].currentTime=0;
+              $('#s1')[0].play();
+           }else{
+              $('#s1')[0].pause();
+              $('#s1')[0].currentTime=0;
+              $('#s1')[0].play();
+              $("#say1").attr('disabled', true);
+              $("#say1").css("background", "blue");
+              $("#say1").css("color", "white");
+              $("#say1").text("II");
+           }
+        });
+
+        $('#say2').click(function() {
+          attemptWord2++;
+
+          if(attemptWord2 <= 2){
+              $('#s2')[0].pause();
+              $('#s2')[0].currentTime=0;
+              $('#s2')[0].play();
+           }else{
+              $('#s2')[0].pause();
+              $('#s2')[0].currentTime=0;
+              $('#s2')[0].play();
+              $("#say2").attr('disabled', true);
+              $("#say2").css("background", "blue");
+              $("#say2").css("color", "white");
+              $("#say2").text("II");
+           }
+        });
+
+        
+        $('#say3').click(function() {
+          attemptWord3++;
+
+          if(attemptWord3 <= 2){
+              $('#s3')[0].pause();
+              $('#s3')[0].currentTime=0;
+              $('#s3')[0].play();
+           }else{
+              $('#s3')[0].pause();
+              $('#s3')[0].currentTime=0;
+              $('#s3')[0].play();
+              $("#say3").attr('disabled', true);
+              $("#say3").css("background", "blue");
+              $("#say3").css("color", "white");
+              $("#say3").text("II");
+           }
+        });
+
+        $('#say4').click(function() {
+          attemptWord4++;
+
+          if(attemptWord4 <= 2){
+              $('#s4')[0].pause();
+              $('#s4')[0].currentTime=0;
+              $('#s4')[0].play();
+           }else{
+              $('#s4')[0].pause();
+              $('#s4')[0].currentTime=0;
+              $('#s4')[0].play();
+              $("#say4").attr('disabled', true);
+              $("#say4").css("background", "blue");
+              $("#say4").css("color", "white");
+              $("#say4").text("II");
+           }
+        });
+     });
+     </script>
+   </body>

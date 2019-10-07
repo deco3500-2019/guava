@@ -1,11 +1,16 @@
 .demonstrator{
     text-align: center;
-    margin:2px solid black;
     box-sizing: border-box;
     font-size: 20px;
+    border-right: 2px solid black;
 }
 
 .italic{
     font-style: italic;
+}
+
+button{
+    border-radius:5px;
+    border: 1px solid black;
 }
 

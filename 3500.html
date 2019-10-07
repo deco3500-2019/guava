@@ -7,7 +7,7 @@
    </head>
    
    <body>
-      
+      <div class="everything">
        <div class="col-sm-12">
           <h2>Food Language App</h2>
            <p>Welcome to our trial system for learning language through cooking.
@@ -25,30 +25,31 @@
 
         <div class="col-sm-12">
               <br><br>
+              <hr>
         </div>
 
         <div class="demonstrator col-sm-3 ">
            <div class="col-sm-12"> Masukkan</div><br>
            <div class="col-sm-12 italic"> Place</div><br><br>
-           <div class="col-sm-12"><button id="say1">Say</button></div>  
+           <div class="col-sm-12"><button id="say1" class="activeBtn">Say</button></div>  
         </div>
 
         <div class="demonstrator col-sm-3 ">
            <div class="col-sm-12"> jus</div><br>
            <div class="col-sm-12 italic"> the juice</div><br><br>
-           <div class="col-sm-12"><button id="say2">Say</button></div>  
+           <div class="col-sm-12"><button id="say2" disabled="true" class="inactiveBtn">Say</button></div>  
         </div>
 
         <div class="demonstrator col-sm-3 ">
            <div class="col-sm-12"> ke dalam</div><br>
            <div class="col-sm-12 italic"> in </div><br><br>
-           <div class="col-sm-12"><button id="say3">Say</button></div>   
+           <div class="col-sm-12"><button id="say3" disabled="true" class="inactiveBtn">Say</button></div>   
         </div>
 
         <div class="demonstrator col-sm-3 ">
            <div class="col-sm-12"> gelas</div><br>
            <div class="col-sm-12 italic"> the glass</div><br><br>
-           <div class="col-sm-12"><button id="say4">Say</button></div>  
+           <div class="col-sm-12"><button id="say4" disabled="true" class="inactiveBtn">Say</button></div>  
         </div>
        </div>
 
@@ -62,19 +63,21 @@
        
        <div class="col-sm-12">
           <br><br>
+          <hr>
        </div>
 
        <div>
           <span class="col-sm-1"></span>
           <button id="resetBtn" class="col-sm-2">Restart this activity</button>
           <span class="col-sm-2"></span>
-          <button id="feedbackBtn" class="col-sm-2">Feedback</button>
+          <button id="feedbackBtn" disabled="true" class="col-sm-2 inactiveBtn">Feedback</button>
           <span class="col-sm-2" ></span>
-          <button id="progressBtn" disabled="true" class="col-sm-2">Start next activity</button>
+          <button id="progressBtn" disabled="true" class="col-sm-2 inactiveBtn">Start next activity</button>
           <span class="col-sm-1"></span>
        </div>
      <script>
-     
+     var reqattempts = 2; //change this to change the required number of attemots for all words
+
      var attemptWord1 = 0;
      var attemptWord2 = 0;
      var attemptWord3 = 0;
@@ -91,7 +94,7 @@
         $('#say1').click(function() {
            attemptWord1++;
 
-          if(attemptWord1 <= 2){
+          if(attemptWord1 <= reqattempts){
               $('#s1')[0].pause();
               $('#s1')[0].currentTime=0;
               $('#s1')[0].play();
@@ -103,13 +106,15 @@
               $("#say1").css("background", "blue");
               $("#say1").css("color", "white");
               $("#say1").text("II");
+              $("#say2").attr('disabled', false);
+              $("#say2").fadeIn("300");
            }
         });
 
         $('#say2').click(function() {
           attemptWord2++;
 
-          if(attemptWord2 <= 2){
+          if(attemptWord2 <= reqattempts){
               $('#s2')[0].pause();
               $('#s2')[0].currentTime=0;
               $('#s2')[0].play();
@@ -121,6 +126,8 @@
               $("#say2").css("background", "blue");
               $("#say2").css("color", "white");
               $("#say2").text("II");
+              $("#say3").attr('disabled', false);
+              $("#say3").fadeIn("300");
            }
         });
 
@@ -128,7 +135,7 @@
         $('#say3').click(function() {
           attemptWord3++;
 
-          if(attemptWord3 <= 2){
+          if(attemptWord3 <= reqattempts){
               $('#s3')[0].pause();
               $('#s3')[0].currentTime=0;
               $('#s3')[0].play();
@@ -140,13 +147,15 @@
               $("#say3").css("background", "blue");
               $("#say3").css("color", "white");
               $("#say3").text("II");
+              $("#say4").attr('disabled', false);
+              $("#say4").fadeIn("300");
            }
         });
 
         $('#say4').click(function() {
           attemptWord4++;
 
-          if(attemptWord4 <= 2){
+          if(attemptWord4 <= reqattempts){
               $('#s4')[0].pause();
               $('#s4')[0].currentTime=0;
               $('#s4')[0].play();
@@ -158,8 +167,13 @@
               $("#say4").css("background", "blue");
               $("#say4").css("color", "white");
               $("#say4").text("II");
+              $("#feedbackBtn").attr('disabled', false);
+              $("#feedbackBtn").fadeIn("300");
+              $("#progressBtn").attr('disabled', false);
+              $("#progressBtn").fadeIn("300");
            }
         });
      });
      </script>
+     </div>
    </body>

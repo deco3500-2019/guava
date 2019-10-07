@@ -14,3 +14,24 @@ button{
     border: 1px solid black;
 }
 
+.activeBtn{
+    background: green;
+    color:white;
+}
+
+.inactiveBtn{
+   background: green;
+   color:white;
+   display:none;
+}
+
+hr{
+    border:1px solid black;
+}
+
+/*
+for future selection issues
+
+.everything{
+    display: none;
+}*/

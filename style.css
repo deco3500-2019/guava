@@ -60,6 +60,16 @@ color:white;
     background:rgb(32, 31, 31);
 }
 
+.notice{
+    border:2px dashed green;
+    padding:5px;
+    font-size:18px;
+}
+
+.green{
+color:green;
+font-weight:bold;
+}
 /*
 for future selection issues
 

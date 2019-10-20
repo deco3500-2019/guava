@@ -16,10 +16,12 @@
            </p>
        </div>
 
+       <div class="stepcount">1</div><br><br>
+
        <div class="demonstratorHolder">
         <div class="demonstrator demonstratorPrimary col-sm-12">
-           <div class="col-sm-12"> Masukkan jus ke dalam gelas</div><br>
-           <div class="col-sm-12 italic"> Place the juice in the glass</div><br><br>
+           <div class="col-sm-12"> Tuangkan teh ke dalam cawan</div><br>
+           <div class="col-sm-12 italic"> Pour the tea in the glass</div><br><br>
            <div class="col-sm-12"><button id="sayFS1">Say</button></div>  
         </div>
 
@@ -29,35 +31,39 @@
         </div>
 
         <div class="demonstrator col-sm-3 ">
-           <div class="col-sm-12"> Masukkan</div><br>
-           <div class="col-sm-12 italic"> Place</div><br><br>
+           <div class="col-sm-12"> Tuangkan</div><br>
+           <div class="col-sm-12 explainer"> Too-ahng-kan</div><br>
+           <div class="col-sm-12 italic"> Pour</div><br><br>
            <div class="col-sm-12"><button id="say1" class="activeBtn">Say</button></div>  
         </div>
 
         <div class="demonstrator col-sm-3 ">
-           <div class="col-sm-12"> jus</div><br>
-           <div class="col-sm-12 italic"> the juice</div><br><br>
+           <div class="col-sm-12"> teh</div><br>
+           <div class="col-sm-12 explainer"> tehh</div><br>
+           <div class="col-sm-12 italic"> the tea</div><br><br>
            <div class="col-sm-12"><button id="say2" disabled="true" class="inactiveBtn">Say</button></div>  
         </div>
 
         <div class="demonstrator col-sm-3 ">
            <div class="col-sm-12"> ke dalam</div><br>
+           <div class="col-sm-12 explainer"> cuhh dahh-laam</div><br>
            <div class="col-sm-12 italic"> in </div><br><br>
            <div class="col-sm-12"><button id="say3" disabled="true" class="inactiveBtn">Say</button></div>   
         </div>
 
         <div class="demonstrator col-sm-3 ">
-           <div class="col-sm-12"> gelas</div><br>
-           <div class="col-sm-12 italic"> the glass</div><br><br>
+           <div class="col-sm-12"> cawan</div><br>
+           <div class="col-sm-12 explainer"> caa-wahn</div><br>
+           <div class="col-sm-12 italic"> the cup</div><br><br>
            <div class="col-sm-12"><button id="say4" disabled="true" class="inactiveBtn">Say</button></div>  
         </div>
        </div>
 
        <div>
-           <audio id="s1" src="masukkan.mp3"></audio>
-           <audio id="s2" src="jus.mp3"></audio>
+           <audio id="s1" src="tuangkan.mp3"></audio>
+           <audio id="s2" src="teh.mp3"></audio>
            <audio id="s3" src="keDalam.mp3"></audio>
-           <audio id="s4" src="gelas.mp3"></audio>
+           <audio id="s4" src="cawan.mp3"></audio>
            <audio id="fs1" src="fullsen1.mp3"></audio>
        </div>
        
@@ -70,8 +76,6 @@
           <span class="col-sm-1"></span>
           <button id="resetBtn" class="col-sm-2">Restart this activity</button>
           <span class="col-sm-2"></span>
-          <button id="feedbackBtn" disabled="true" class="col-sm-2 inactiveBtn">Feedback</button>
-          <span class="col-sm-2" ></span>
           <button id="progressBtn" disabled="true" class="col-sm-2 inactiveBtn">Start next activity</button>
           <span class="col-sm-1"></span>
        </div>
@@ -167,8 +171,6 @@
               $("#say4").css("background", "blue");
               $("#say4").css("color", "white");
               $("#say4").text("II");
-              $("#feedbackBtn").attr('disabled', false);
-              $("#feedbackBtn").fadeIn("300");
               $("#progressBtn").attr('disabled', false);
               $("#progressBtn").fadeIn("300");
            }

@@ -47,6 +47,19 @@ hr{
     padding:2px 0px 15px 0px;
 }
 
+a{
+text-decoration: none;
+color:white;
+}
+
+#prevBtn{
+    background:rgb(32, 31, 31);
+}
+
+#resetBtn{
+    background:rgb(32, 31, 31);
+}
+
 /*
 for future selection issues
 

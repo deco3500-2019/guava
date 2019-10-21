@@ -9,19 +9,19 @@
    <body>
       <div class="everything">
        <div class="col-sm-12">
-          <h2>Mouthful - Learning Through Food </h2>
-           <p>Welcome to our trial system for learning language through recipes.
-              <br><br>
-              Follow the recipe to learn some new words! 
-           </p>
+          <h2>Mouthful - Learning Through Food</h2>
+          <p class="notice col-sm-12">In malay, some words may be modified to mean different things based on context.
+             (<span class="green italic">Kacau</span> - mix), can be modified to both be a description of an object
+             (<span class="green italic">Kacauan</span> - mixture) or an action 
+             <span class="green italic">Kacaukan</span> - to mix / to stir. </p>
        </div>
 
-       <div class="stepcount">1</div><br><br>
+       <div class="stepcount">4</div><br><br>
 
        <div class="demonstratorHolder">
         <div class="demonstrator demonstratorPrimary col-sm-12">
-           <div class="col-sm-12"> Tuangkan teh ke dalam cawan</div><br>
-           <div class="col-sm-12 italic"> Pour the tea in the cup</div><br><br>
+           <div class="col-sm-12">Akhirnya, kacaukan kacauan dan minum</div><br>
+           <div class="col-sm-12 italic"> Finally, stir the mixture and drink it</div><br><br>
            <div class="col-sm-12"><button id="sayFS1">Say</button></div>  
         </div>
 
@@ -31,40 +31,40 @@
         </div>
 
         <div class="demonstrator col-sm-3 ">
-           <div class="col-sm-12"> Tuangkan</div><br>
-           <div class="col-sm-12 explainer"> Too-ahng-kan</div><br>
-           <div class="col-sm-12 italic"> Pour</div><br><br>
+           <div class="col-sm-12"> Akhirnya</div><br>
+           <div class="col-sm-12 explainer"> Aahk-heer-near</div><br>
+           <div class="col-sm-12 italic"> Finally</div><br><br>
            <div class="col-sm-12"><button id="say1" class="activeBtn">Say</button></div>  
         </div>
 
         <div class="demonstrator col-sm-3 ">
-           <div class="col-sm-12"> teh</div><br>
-           <div class="col-sm-12 explainer"> tehh</div><br>
-           <div class="col-sm-12 italic"> the tea</div><br><br>
+           <div class="col-sm-12"> kacaukan</div><br>
+           <div class="col-sm-12 explainer"> kah-choww-kahn</div><br>
+           <div class="col-sm-12 italic">mix / stir</div><br><br>
            <div class="col-sm-12"><button id="say2" disabled="true" class="inactiveBtn">Say</button></div>  
         </div>
 
         <div class="demonstrator col-sm-3 ">
-           <div class="col-sm-12"> ke dalam</div><br>
-           <div class="col-sm-12 explainer"> cuhh dahh-laam</div><br>
-           <div class="col-sm-12 italic"> in </div><br><br>
+           <div class="col-sm-12"> kacauan</div><br>
+           <div class="col-sm-12 explainer"> cahh-choww-ahn</div><br>
+           <div class="col-sm-12 italic"> the mixture </div><br><br>
            <div class="col-sm-12"><button id="say3" disabled="true" class="inactiveBtn">Say</button></div>   
         </div>
 
         <div class="demonstrator col-sm-3 ">
-           <div class="col-sm-12"> cawan</div><br>
-           <div class="col-sm-12 explainer"> caa-wahn</div><br>
-           <div class="col-sm-12 italic"> the cup</div><br><br>
+           <div class="col-sm-12"> dan minum</div><br>
+           <div class="col-sm-12 explainer"> dahn mee-noohm</div><br>
+           <div class="col-sm-12 italic"> and drink it.</div><br><br>
            <div class="col-sm-12"><button id="say4" disabled="true" class="inactiveBtn">Say</button></div>  
         </div>
        </div>
 
        <div>
-           <audio id="s1" src="tuangkan.mp3"></audio>
-           <audio id="s2" src="teh.mp3"></audio>
-           <audio id="s3" src="keDalam.mp3"></audio>
-           <audio id="s4" src="cawan.mp3"></audio>
-           <audio id="fs1" src="fullsen1.mp3"></audio>
+           <audio id="s1" src="Akhirnya.mp3"></audio>
+           <audio id="s2" src="kacaukan.mp3"></audio>
+           <audio id="s3" src="kacauan.mp3"></audio>
+           <audio id="s4" src="danMinum.mp3"></audio>
+           <audio id="fs1" src="fullsen4.mp3"></audio>
        </div>
        
        <div class="col-sm-12">
@@ -73,11 +73,11 @@
        </div>
 
        <div>
-          <span class="col-sm-1"></span>
-          <button id="resetBtn" class="col-sm-2"><a class="col-sm-12" href="Step1.html">Restart this activity</a></button>
+         <span class="col-sm-1"></span>
+         <button id="prevBtn" class="col-sm-2"><a class="col-sm-12" href="Step3.html">Previous activity</a></button>
+         <span class="col-sm-2"></span>
+          <button id="resetBtn" class="col-sm-2"><a class="col-sm-12" href="Step4.html">Restart this activity</a></button>
           <span class="col-sm-2"></span>
-          <button id="progressBtn" disabled="true" class="col-sm-2 inactiveBtn"><a class="col-sm-12" href="Step2.html">Start next activity</a></button>
-          <span class="col-sm-1"></span>
        </div>
      <script>
      var reqattempts = 2; //change this to change the required number of attemots for all words
@@ -171,8 +171,6 @@
               $("#say4").css("background", "blue");
               $("#say4").css("color", "white");
               $("#say4").text("II");
-              $("#progressBtn").attr('disabled', false);
-              $("#progressBtn").fadeIn("300");
            }
         });
      });

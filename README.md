@@ -39,3 +39,4 @@ Repository for Team Guava (W01)
 3. Connect the end of the 10k ohm resistor to the breadboard's negative channel. 
 4. Connect the other button leg (same row as the one attached to the 10k ohm resistor) to pins 2, 3 and 4 (one pin for each button).  
 ##### **Step 4:** Upload LEDFeedback.ino to the Arduino Uno.  
+##### **Step 5:** Press a button to light an LED up, pin 2, 3, 4 buttons control pin 10, 11, 12 LEDs respectively. Press again to de-light it.

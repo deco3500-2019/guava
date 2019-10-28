@@ -1,5 +1,7 @@
 # guava
 
+Repository for Team Guava (W01)
+
 ## Interface Guide
 This portion of the prototype is a simple system that gets users to listen to and repeat after certain words.
 
@@ -38,7 +40,7 @@ This portion of the prototype is a system where the system (as in, a validator) 
 
 
 
-Repository for Team Guava (W01)
+## Wiki Contents
 [Home](https://github.com/deco3500-2019/guava/wiki)
 
 [Proposal](https://github.com/deco3500-2019/guava/wiki/Proposal)
